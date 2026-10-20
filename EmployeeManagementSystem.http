@@ -1,0 +1,51 @@
+@EmployeeManagementSystem_HostAddress = http://localhost:5207
+
+### Get all employees
+GET {{EmployeeManagementSystem_HostAddress}}/api/employees
+Accept: application/json
+
+### Get employee by ID
+GET {{EmployeeManagementSystem_HostAddress}}/api/employees/1
+Accept: application/json
+
+### Create new employee
+POST {{EmployeeManagementSystem_HostAddress}}/api/employees
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "phone": "9876543219",
+  "salary": 55000.00,
+  "departmentId": 1
+}
+
+### Update employee
+PUT {{EmployeeManagementSystem_HostAddress}}/api/employees/1
+Content-Type: application/json
+
+{
+  "firstName": "Rahul",
+  "lastName": "Sharma",
+  "email": "rahul@example.com",
+  "phone": "9876543210",
+  "salary": 48000.00,
+  "departmentId": 1
+}
+
+### Delete employee
+DELETE {{EmployeeManagementSystem_HostAddress}}/api/employees/5
+
+### Get all departments
+GET {{EmployeeManagementSystem_HostAddress}}/api/departments
+Accept: application/json
+
+### Create new department
+POST {{EmployeeManagementSystem_HostAddress}}/api/departments
+Content-Type: application/json
+
+{
+  "departmentName": "Operations"
+}
+
